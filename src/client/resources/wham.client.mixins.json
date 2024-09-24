@@ -1,0 +1,13 @@
+{
+	"required": true,
+	"package": "com.kckarnige.wham.mixin.client",
+	"compatibilityLevel": "JAVA_21",
+	"client": [
+		"ItemRendererAccessor",
+		"ItemRendererMixin",
+		"ModelLoaderMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "wham",
+	"version": "${version}",
+	"name": "Slow Your Bronze",
+	"description": "A compatibility mod to make the 'Bronze' mod compatible with 'Slow Your Roll'.",
+	"authors": [
+		"KayoticCarnige"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/kckarnige/wham"
+	},
+	"license": "MIT",
+	"icon": "assets/wham/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.kckarnige.wham.wham"
+		],
+		"client": [
+			"com.kckarnige.wham.whamClient"
+		]
+	},
+	"mixins": [
+		"wham.mixins.json",
+		{
+			"config": "wham.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
