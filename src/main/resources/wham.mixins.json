@@ -2,6 +2,9 @@
 	"required": true,
 	"package": "com.kckarnige.wham.mixin",
 	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"MaceMixin"
+	],
 	"injectors": {
 		"defaultRequire": 1
 	}

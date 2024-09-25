@@ -25,6 +25,7 @@ public abstract class ModelLoaderMixin {
             )}
     )
     private void addMace(CallbackInfo info) {
+        this.loadItemModel(ModelIdentifier.ofInventoryVariant(Identifier.of(MOD_ID, "mace_hand_wind")));
         this.loadItemModel(ModelIdentifier.ofInventoryVariant(Identifier.of(MOD_ID, "mace_hand")));
     }
 }
