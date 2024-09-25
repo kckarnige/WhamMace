@@ -36,8 +36,7 @@ public abstract class MaceMixin extends Item {
                 if (hit.getType() == HitResult.Type.BLOCK) {
                     BlockHitResult blockHit = (BlockHitResult) hit;
                     if (Objects.equals(String.valueOf(blockHit.getSide()), "up")) {
-                        if (!(player.getStackInHand(hand).getMaxDamage() - 120 == player.getStackInHand(hand).getMaxDamage() - player.getStackInHand(hand).getDamage())) {
-                            wham.LOGGER.info(String.valueOf(player.getStackInHand(hand).getMaxDamage() - player.getStackInHand(hand).getDamage()+" of "+player.getStackInHand(hand).getMaxDamage()));
+                        if (!(player.getStackInHand(hand).getMaxDamage() * 0.80 >= player.getStackInHand(hand).getMaxDamage() - player.getStackInHand(hand).getDamage())) {
                             world.playSound(null, player.getBlockPos(), SoundEvent.of(Identifier.of("minecraft:entity.wind_charge.wind_burst")), SoundCategory.PLAYERS);
                             world.addParticle(ParticleTypes.HEART, player.getX(), player.getY() + 2.0, player.getZ(), 0.0, 0.0, 0.0);
                             player.addStatusEffect(new StatusEffectInstance(StatusEffects.LEVITATION, 4, 20, false, false, false));
