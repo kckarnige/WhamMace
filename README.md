@@ -3,10 +3,11 @@
 #
 
 This mod gives the mace a complete overhaul, making it as special as the trident, if not even more so!  
-This mod also expands the capabilities of the mace by adding a new crafting recipe, new items, and a new ability, wind bounce!
+This mod also expands the capabilities of the mace by adding a new crafting recipe, new items, and a new ability, "wind bounce"!
 
 You can wind bounce by using the mace on the ground below you, though it can only be used to a certain point and does cost a good amount of durability, use it wisely!
 
+![crafting example](https://raw.githubusercontent.com/kckarnige/WhamMace/refs/heads/main/wham_craftExample.png)
 
 #
 
