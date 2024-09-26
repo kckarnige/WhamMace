@@ -5,7 +5,7 @@
 This mod gives the mace a complete overhaul, making it as special as the trident, if not even more so!  
 This mod also expands the capabilities of the mace by adding a new crafting recipe, new items, and a new ability, wind bounce!
 
-You can wind bounce by using the mace on the ground below you, though it does cost a good amount of durabilty, use it wisely!
+You can wind bounce by using the mace on the ground below you, though it can only be used to a certain point and does cost a good amount of durability, use it wisely!
 
 
 #
@@ -13,7 +13,7 @@ You can wind bounce by using the mace on the ground below you, though it does co
 # Q&A 
 
 ### Q: Can I use this in my modpack?
-A: Yes, though it is prefered you wait for the final release before making that decision.
+A: Of course, just please make sure to give credit, whether the modpack is on Curseforge, Modrinth, or any other site.
 
 ### Q: Can I redistrubute this?
 A: Unless you're in a third-world country, no.
