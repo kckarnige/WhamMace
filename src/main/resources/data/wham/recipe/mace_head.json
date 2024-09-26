@@ -2,26 +2,23 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "pattern": [
+    " - ",
     "=#=",
-    " I ",
-    " - "
+    "- -"
   ],
   "key": {
     "#": {
-      "item": "wham:mace_head"
+      "item": "minecraft:heavy_core"
     },
     "=": {
-      "item": "minecraft:wind_charge"
+      "item": "minecraft:iron_ingot"
     },
     "-": {
       "item": "minecraft:iron_nugget"
-    },
-    "I": {
-      "item": "minecraft:breeze_rod"
     }
   },
   "result": {
-    "id": "minecraft:mace",
+    "id": "wham:mace_head",
     "count": 1
   }
 }

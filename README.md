@@ -2,10 +2,10 @@
 
 #
 
-This mod gives the mace a complete overhaul, making it like the trident — having a 2D icon with a 3D first-person model.  
-(Credit to [Volery](https://modrinth.com/mod/mace-but-3d/) | [MIT](https://github.com/Volery39/MaceBut3D/blob/3c22f7265b5b1b1ccb5d5774cf890700b03103e0/LICENSE))  
+This mod gives the mace a complete overhaul, making it as special as the trident, if not even more so!  
+This mod also expands the capabilities of the mace by adding a new crafting recipe, new items, and a new ability, wind bounce!
 
-This mod also expands the capabilities of the mace by adding a new crafting recipe, new items, and new other stuff!
+You can wind bounce by using the mace on the ground below you, though it does cost a good amount of durabilty, use it wisely!
 
 
 #

@@ -2,14 +2,14 @@
 	"schemaVersion": 1,
 	"id": "wham",
 	"version": "${version}",
-	"name": "Slow Your Bronze",
-	"description": "A compatibility mod to make the 'Bronze' mod compatible with 'Slow Your Roll'.",
+	"name": "Wham!",
+	"description": "A complete mace overhaul!",
 	"authors": [
 		"KayoticCarnige"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/kckarnige/wham"
+		"sources": "https://github.com/kckarnige/WhamMace"
 	},
 	"license": "MIT",
 	"icon": "assets/wham/icon.png",

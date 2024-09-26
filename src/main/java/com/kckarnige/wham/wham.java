@@ -1,5 +1,6 @@
 package com.kckarnige.wham;
 
+import com.kckarnige.wham.items.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -12,6 +13,7 @@ public class wham implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModItems.registerModItems();
 		LOGGER.info("[Wham!] Now this should pack more of a punch!");
 	}
 }
