@@ -20,4 +20,4 @@ A: Of course, just please make sure to give credit, whether the modpack is on Cu
 A: Unless you're in a third-world country, no.
 
 ### Q: There's a bug, how can I report it?
-A: Submit an issue on GitHub! [Click here to do that](https://github.com/kckarnige/wham/labels), or check the "links" tab on Modrinth.
+A: Submit an issue on GitHub! [Click here to do that.](https://github.com/kckarnige/wham/labels)
