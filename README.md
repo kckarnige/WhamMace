@@ -2,6 +2,8 @@
 
 ----
 
+[![Compatible with Sinytra Connector](https://raw.githubusercontent.com/Sinytra/.github/main/badges/connector/cozy.svg)](https://modrinth.com/mod/connector)
+
 Credit to [GugerOS](https://modrinth.com/user/GugerOS) for making the base model, go check out their [Better Mace Hammer](https://modrinth.com/resourcepack/better-mace-hammer) resource pack, it's amazing!
 
 ----
