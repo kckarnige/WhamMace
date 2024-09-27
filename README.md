@@ -8,6 +8,10 @@ Credit to [GugerOS](https://modrinth.com/user/GugerOS) for making the base model
 
 ----
 
+[![teaser vid](https://img.youtube.com/vi/38Phr-eXdcE/hqdefault.jpg)](https://www.youtube.com/watch?v=38Phr-eXdcE)
+
+----
+
 This mod gives the mace a complete overhaul, making it as special as the trident, if not even more so!  
 This mod also expands the capabilities of the mace by adding a new crafting recipe, new items, and a new ability, "wind bounce"!
 
