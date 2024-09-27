@@ -3,15 +3,15 @@
 	"id": "wham",
 	"version": "${version}",
 	"name": "Wham!",
-	"description": "A complete mace overhaul!",
+	"description": "A mod that gives the mace a complete overhaul!",
 	"authors": [
 		"KayoticCarnige"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
+		"homepage": "https://modrinth.com/mod/wham-mace",
 		"sources": "https://github.com/kckarnige/WhamMace"
 	},
-	"license": "MIT",
+	"license": "MPL-2.0",
 	"icon": "assets/wham/icon.png",
 	"environment": "*",
 	"entrypoints": {
