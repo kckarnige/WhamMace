@@ -8,7 +8,7 @@ Credit to [GugerOS](https://modrinth.com/user/GugerOS) for making the base model
 
 ----
 
-[![teaser vid](https://img.youtube.com/vi/38Phr-eXdcE/hqdefault.jpg)](https://www.youtube.com/watch?v=38Phr-eXdcE)
+[![teaser vid](https://img.youtube.com/vi/VTTuhlxPds0/hqdefault.jpg)](https://www.youtube.com/watch?v=VTTuhlxPds0)
 
 ----
 
