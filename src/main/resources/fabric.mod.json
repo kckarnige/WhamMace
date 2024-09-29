@@ -38,6 +38,6 @@
 		"java": ">=21",
 		"fabric-api": "*",
 		"vanillaconfig": "1.2.11+1.21",
-		"modmenu": "11.0.0"
+		"modmenu": ">=11.0.0"
 	}
 }
