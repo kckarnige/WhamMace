@@ -1,0 +1,21 @@
+{
+    "description": {
+      "translate": "enchantment.wham.wind_bounce"
+    },
+    "supported_items": "minecraft:mace",
+    "slots": [
+      "mainhand",
+      "offhand"
+    ],
+    "weight": 3,
+    "anvil_cost": 4,
+    "max_cost": {
+      "base": 65,
+      "per_level_above_first": 9
+    },
+    "max_level": 2,
+    "min_cost": {
+      "base": 15,
+      "per_level_above_first": 9
+    }
+}

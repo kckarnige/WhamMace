@@ -1,5 +1,7 @@
 package com.kckarnige.wham;
 
+import com.kckarnige.wham.config.MainConfig;
+import com.kckarnige.wham.enchantments.WhamEnchantment;
 import com.kckarnige.wham.items.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -13,6 +15,8 @@ public class wham implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		MainConfig.init();
+		WhamEnchantment.initialize();
 		ModItems.registerModItems();
 		LOGGER.info("[Wham!] Now this should pack more of a punch!");
 	}

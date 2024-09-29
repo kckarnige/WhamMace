@@ -2,16 +2,13 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "pattern": [
-    "=#=",
-    " I ",
-    " - "
+    "#",
+    "I",
+    "-"
   ],
   "key": {
     "#": {
       "item": "wham:mace_head"
-    },
-    "=": {
-      "item": "minecraft:wind_charge"
     },
     "-": {
       "item": "minecraft:iron_nugget"

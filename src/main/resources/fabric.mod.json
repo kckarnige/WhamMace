@@ -20,6 +20,9 @@
 		],
 		"client": [
 			"com.kckarnige.wham.whamClient"
+		],
+		"modmenu": [
+			"com.kckarnige.wham.config.ModMenuConfig"
 		]
 	},
 	"mixins": [
@@ -33,6 +36,8 @@
 		"fabricloader": ">=0.15.11",
 		"minecraft": "~1.21",
 		"java": ">=21",
-		"fabric-api": "*"
+		"fabric-api": "*",
+		"vanillaconfig": "1.2.11+1.21",
+		"modmenu": "11.0.0"
 	}
 }
