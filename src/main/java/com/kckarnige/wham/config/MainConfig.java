@@ -63,6 +63,7 @@ public class MainConfig {
 
 
         SaveLoadManager.globalSaveConfig(clientPage);
+        SaveLoadManager.globalSaveConfig(serverPage);
         MACE_MODEL.onChange(MainConfig::onBooleanConfigChanged);
         CLIENT_CONFIG.onClickL(MainConfig::onClientButtonClick);
         SERVER_CONFIG.onClickL(MainConfig::onServerButtonClick);
