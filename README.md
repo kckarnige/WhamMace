@@ -4,6 +4,12 @@
 
 [![Compatible with Sinytra Connector](https://raw.githubusercontent.com/Sinytra/.github/main/badges/connector/cozy.svg)](https://modrinth.com/mod/connector)
 
+[![CurseForge](https://img.shields.io/curseforge/dt/1110055?style=flat-square&logo=CurseForge&logoColor=f16436&label=CurseForge&labelColor=1a1a1a&color=f16436
+)](https://www.curseforge.com/minecraft/mc-mods/wham-mace)
+[![Modrinth Downloads](https://img.shields.io/modrinth/dt/79WaF2wq?style=flat-square&logo=modrinth&logoColor=1bd96a&label=Modrinth&labelColor=16181c&color=1bd96a
+)
+](https://modrinth.com/mod/wham-mace)
+
 Credit to [GugerOS](https://modrinth.com/user/GugerOS) for making the base model, and [Volery](https://modrinth.com/user/Volery) for the mace code!    
 Go check out [GugerOS's Better Mace Hammer](https://modrinth.com/resourcepack/better-mace-hammer) resource pack, [Volery's Mace but 3D](https://modrinth.com/mod/mace-but-3d), this project wouldn't exist without them!
 
