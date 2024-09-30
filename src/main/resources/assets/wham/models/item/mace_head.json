@@ -122,13 +122,13 @@
 	],
 	"display": {
 		"thirdperson_righthand": {
-			"rotation": [176, 20, -2],
-			"translation": [0, -12, 2.5],
+			"rotation": [0, 0, -2],
+			"translation": [0.5, 16, 1.5],
 			"scale": [2.18, 2.18, 2.18]
 		},
 		"thirdperson_lefthand": {
-			"rotation": [176, 20, -2],
-			"translation": [0, -12, 2.5],
+			"rotation": [0, 0, -2],
+			"translation": [0.5, 16, 1.5],
 			"scale": [2.18, 2.18, 2.18]
 		},
 		"firstperson_righthand": {
