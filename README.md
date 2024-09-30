@@ -4,7 +4,8 @@
 
 [![Compatible with Sinytra Connector](https://raw.githubusercontent.com/Sinytra/.github/main/badges/connector/cozy.svg)](https://modrinth.com/mod/connector)
 
-Credit to [GugerOS](https://modrinth.com/user/GugerOS) for making the base model, go check out their [Better Mace Hammer](https://modrinth.com/resourcepack/better-mace-hammer) resource pack, it's amazing!
+Credit to [GugerOS](https://modrinth.com/user/GugerOS) for making the base model, and [Volery](https://modrinth.com/user/Volery) for the mace code!    
+Go check out [GugerOS's Better Mace Hammer](https://modrinth.com/resourcepack/better-mace-hammer) resource pack, [Volery's Mace but 3D](https://modrinth.com/mod/mace-but-3d), this project wouldn't exist without them!
 
 ----
 
@@ -12,10 +13,17 @@ Credit to [GugerOS](https://modrinth.com/user/GugerOS) for making the base model
 
 ----
 
-This mod gives the mace a complete overhaul, making it as special as the trident, if not even more so!  
-This mod also expands the capabilities of the mace by adding a new crafting recipe, new items, and a new ability, "wind bounce"!
+This mod gives the mace a complete overhaul, making it as special as the trident, featuring a 3D model when equiped, with a nice 2D icon in the inventory.
 
-You can wind bounce by using the mace on the ground below you, though it can only be used to a certain point and does cost a good amount of durability, use it wisely!
+This mod also expands the capabilities of the mace by adding a new enchantment known as "Wind Bounce", just hit the floor and kiss the ground goodbye! Be cautious however, Wind Bouncing can take a toll on your mace when used, so make sure to use your mace wisely!
+
+
+<details>
+<summary>Spoiler</summary>
+
+Wind Bounce II does less damage to your mace, and does even less damage when paired with Unbreaking, with Lv I halfing the damage your mace takes.
+
+</details>
 
 ![crafting example](https://raw.githubusercontent.com/kckarnige/WhamMace/refs/heads/main/wham_craftExample.png)
 
