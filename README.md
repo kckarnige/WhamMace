@@ -32,10 +32,14 @@ This mod also expands the capabilities of the mace by adding a new enchantment k
 # Q&A 
 
 ### Q: Can I use this in my modpack?
-A: Of course, just please make sure to give credit, whether the modpack is on Curseforge, Modrinth, or any other site.
+A: Of course, just please make sure to give credit, whether the modpack is on Curseforge, Modrinth, or any other site.   
+*As long as you don't attempt to claim the mod as your own, I don't mind.*
 
 ### Q: Can I redistrubute this?
 A: Unless you're in a third-world country, no.
 
 ### Q: There's a bug, how can I report it?
 A: Submit an issue on GitHub! [Click here to do that.](https://github.com/kckarnige/wham/labels)
+
+### Q: I don't have any other questions
+A: If you like what I do, you can donate to my [Ko-Fi](https://ko-fi.com/kckarnige), my [CashApp](https://cash.app/$kckarnige), or [buy me a coffee](https://buymeacoffee.com/kckarnige)!
