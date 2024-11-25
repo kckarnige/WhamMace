@@ -1,8 +1,7 @@
 package com.kckarnige.wham.mixin;
 
-import com.kckarnige.wham.config.MainConfig;
+import com.kckarnige.wham.config.MidnightConfigStuff;
 import com.kckarnige.wham.enchantments.WhamEnchantment;
-import com.kckarnige.wham.wham;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -41,13 +40,13 @@ public abstract class MaceMixin extends Item {
                             windCharge.setPosition(player.getPos());
                             windCharge.setVelocity(0.0, -2.0, 0.0);
 
-                            if (MainConfig.DEFAULT_BOUNCE.getBoolean() && !player.isSneaking()) {
+                            if ((MidnightConfigStuff.DEFAULT_BOUNCE) && !player.isSneaking()) {
                                 // 4 uses until repair needed (8 with Unbreaking I, 17 with Unbreaking III)
                                 player.getStackInHand(hand).damage(38, player, LivingEntity.getSlotForHand(hand));
                                 player.getItemCooldownManager().set(this, 10);
                                 world.spawnEntity(windCharge);
                                 return TypedActionResult.success(player.getStackInHand(hand));
-                            } else if (MainConfig.DEFAULT_BOUNCE.getBoolean() && !MainConfig.BIG_BOUNCE.getBoolean()) {
+                            } else if ((MidnightConfigStuff.DEFAULT_BOUNCE) && !(MidnightConfigStuff.BIG_BOUNCE)) {
                                 // 4 uses until repair needed (8 with Unbreaking I, 17 with Unbreaking III)
                                 player.getStackInHand(hand).damage(38, player, LivingEntity.getSlotForHand(hand));
                                 player.getItemCooldownManager().set(this, 10);
@@ -58,7 +57,7 @@ public abstract class MaceMixin extends Item {
                             int WindSlamLV = EnchantmentHelper.getLevel(world.getRegistryManager().getWrapperOrThrow(RegistryKeys.ENCHANTMENT).getOrThrow(WhamEnchantment.WIND_BOUNCE), player.getStackInHand(hand));
                             if (WindSlamLV != 0) {
 
-                                if (player.isSneaking() && MainConfig.BIG_BOUNCE.getBoolean()) {
+                                if (player.isSneaking() && (MidnightConfigStuff.BIG_BOUNCE)) {
                                     player.getItemCooldownManager().set(this, 30);
 
                                     WindChargeEntity windCharge2 = new WindChargeEntity(EntityType.BREEZE_WIND_CHARGE, world);
@@ -81,7 +80,7 @@ public abstract class MaceMixin extends Item {
                                     world.spawnEntity(windCharge);
 
 
-                                    if (MainConfig.DEFAULT_BOUNCE.getBoolean()) {
+                                    if ((MidnightConfigStuff.DEFAULT_BOUNCE)) {
                                         switch (WindSlamLV) {
                                             case 1:
                                                 // 5 uses until repair needed (10 with Unbreaking I, 19 with Unbreaking III)

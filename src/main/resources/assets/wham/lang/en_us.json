@@ -1,22 +1,19 @@
 {
     "item.wham.mace_head": "Mace Head",
     "enchantment.wham.wind_bounce": "Wind Bounce",
-    
-    "config.wham": "Wham! Config",
-    "config.wham.client": "Wham! Config > Client-Side",
-    "config.wham.server": "Wham! Config > Server-Side",
-    "config.wham.client_button": "Client Config",
-    "config.wham.server_button": "Server Config",
 
-    "config.wham.3d_mace": "Use 3D Mace Model",
-    "config.wham.mace_wind_toggle": "Display Wind on 3D Mace Model",
-    "config.wham.mace_4ever_wind": "Always Display Wind on Mace",
+    "wham.midnightconfig.title":"Wham Config",
 
-    "config.wham.toggle_charge_bounce": "Enable 'Charge Bounce'",
-    "config.wham.toggle_charge_bounce.description": "Perform a 'Wind Bounce' while sneaking to 'Charge Bounce'.",
+    "wham.midnightconfig.category.server": "Server",
+    "wham.midnightconfig.BIG_BOUNCE":"Enable 'Charge Bounce'",
+    "wham.midnightconfig.BIG_BOUNCE.tooltip":"Perform a 'Wind Bounce' while sneaking to 'Charge Bounce'.",
+    "wham.midnightconfig.DEFAULT_BOUNCE":"Use 'Wind Bounce' Without Enchant",
+    "wham.midnightconfig.DEFAULT_BOUNCE.tooltip":"Enables the Mace's ability to 'Wind Bounce' even without the enchantment.\n\nThe enchantment is still obtainable and does still work as intended.",
 
-    "config.wham.wind_bounce_default": "Use 'Wind Bounce' Without Enchant",
-    "config.wham.wind_bounce_default.description": "Enables the Mace's ability to 'Wind Bounce' even without the enchantment. The enchantment is still obtainable and does still work as intended.",
+    "wham.midnightconfig.category.client": "Client",
+    "wham.midnightconfig.MACE_MODEL":"Use 3D Mace Model",
+    "wham.midnightconfig.MACE_WINDU":"Display Wind on 3D Mace Model",
+    "wham.midnightconfig.MACE_WINDU_4EVS":"Always Display Wind on Mace",
 
     "enchantment_lore.wham:wind_bounce.lore": "Within this ancient tome lies the stories of an ancient civilization which took pride in the powers and gifts brought by the airs and winds, this was the same civilization responsible for the first documented discovery of the Breeze.\n\nEven though this book has hundreds of pages, it's lighter than a feather.",
     "enchantment_lore.wham:wind_bounce.description": "§nWind Bounce§r\n\nMax Level: II\n\nCompatible with: Mace\n\nUsing the mace on the ground launches the wielder into the air, doing so does a considerable amount of damage to the mace.\n\nUsing while crouched will have the wielder launch higher, and deal double the damage to the mace.\n\nThe higher the level the less damage the mace takes when using this ability."
