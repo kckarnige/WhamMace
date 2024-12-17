@@ -14,9 +14,11 @@ import net.minecraft.util.Rarity;
 public class ModItems {
 
     public static final Item MACE_HEAD = registerItem("mace_head", new Item(new Item.Settings().rarity(Rarity.EPIC)));
+    public static final Item MACE_TIP = registerItem("mace_tip", new Item(new Item.Settings().rarity(Rarity.COMMON)));
 
     private static void addItemToItemGroup(FabricItemGroupEntries entries) {
         entries.add(MACE_HEAD);
+        entries.add(MACE_TIP);
     }
 
     private static Item registerItem (String name, Item item) {

@@ -2,11 +2,14 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "pattern": [
-    " - ",
+    " + ",
     "=#=",
     "- -"
   ],
   "key": {
+    "+": {
+      "item": "wham:mace_tip"
+    },
     "#": {
       "item": "minecraft:heavy_core"
     },
