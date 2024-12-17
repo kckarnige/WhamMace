@@ -16,12 +16,15 @@ import net.minecraft.util.Rarity;
 public class ModItems {
 
     public static final Item MACE_HEAD = registerItem("mace_head", new Item.Settings().rarity(Rarity.EPIC));
+    public static final Item MACE_TIP = registerItem("mace_tip", new Item.Settings().rarity(Rarity.EPIC));
 
     private static void addItemToItemGroup(FabricItemGroupEntries entries) {
         entries.add(MACE_HEAD);
+        entries.add(MACE_TIP);
     }
 
     private static Item registerItem (String id, Item.Settings item) {
+        // This is why we 
         RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(wham.MOD_ID, id));
         return Registry.register(Registries.ITEM, key, new Item(item.registryKey(key)));
     }

@@ -2,20 +2,15 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "pattern": [
-    " - ",
+    " + ",
     "=#=",
     "- -"
   ],
   "key": {
-    "#": {
-      "item": "minecraft:heavy_core"
-    },
-    "=": {
-      "item": "minecraft:copper_ingot"
-    },
-    "-": {
-      "item": "minecraft:iron_nugget"
-    }
+    "+": "wham:mace_tip",
+    "#": "minecraft:heavy_core",
+    "=": "minecraft:copper_ingot",
+    "-": "minecraft:iron_nugget"
   },
   "result": {
     "id": "wham:mace_head",

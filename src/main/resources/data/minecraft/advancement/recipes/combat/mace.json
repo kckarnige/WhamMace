@@ -37,7 +37,8 @@
   ],
   "rewards": {
     "recipes": [
-      "wham:mace_head"
+      "wham:mace_head",
+      "wham:mace_tip"
     ]
   }
 }
