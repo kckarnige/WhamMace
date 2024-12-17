@@ -1,6 +1,6 @@
 package com.kckarnige.wham.mixin.client;
 
-import net.minecraft.client.render.model.ModelLoader;
+import net.minecraft.client.render.model.ModelBaker;
 import net.minecraft.client.util.ModelIdentifier;
 import net.minecraft.util.Identifier;
 import org.spongepowered.asm.mixin.Mixin;
@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import static com.kckarnige.wham.wham.MOD_ID;
 
-@Mixin(ModelLoader.class)
+@Mixin(ModelBaker.class)
 public abstract class ModelLoaderMixin {
     @Shadow
     protected abstract void loadItemModel(ModelIdentifier id);

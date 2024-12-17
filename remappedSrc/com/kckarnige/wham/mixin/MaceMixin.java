@@ -22,7 +22,7 @@ import java.util.Objects;
 @Mixin(MaceItem.class)
 public abstract class MaceMixin extends Item {
 
-    public MaceMixin(Settings settings) {
+    public MaceMixin(net.minecraft.item.Item.Settings settings) {
         super(settings);
     }
 
@@ -110,6 +110,6 @@ public abstract class MaceMixin extends Item {
                 }
             }
         }
-        return ActionResult.SUCCESS;
+        return ActionResult.FAIL;
     }
 }

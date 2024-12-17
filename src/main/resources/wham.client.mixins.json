@@ -4,8 +4,7 @@
 	"compatibilityLevel": "JAVA_21",
 	"client": [
 		"ItemRendererAccessor",
-		"ItemRendererMixin",
-		"ModelLoaderMixin"
+		"ItemRendererMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
