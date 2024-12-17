@@ -110,6 +110,6 @@ public abstract class MaceMixin extends Item {
                 }
             }
         }
-        return ActionResult.SUCCESS;
+        return ActionResult.FAIL;
     }
 }
