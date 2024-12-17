@@ -44,12 +44,14 @@ public abstract class MaceMixin extends Item {
                                 player.getStackInHand(hand).damage(38, player, LivingEntity.getSlotForHand(hand));
                                 player.getItemCooldownManager().set(player.getStackInHand(hand), 10);
                                 world.spawnEntity(windCharge);
+                                player.swingHand(hand, true);
                                 return ActionResult.SUCCESS;
                             } else if ((MidnightConfigStuff.DEFAULT_BOUNCE) && !(MidnightConfigStuff.BIG_BOUNCE)) {
                                 // 4 uses until repair needed (8 with Unbreaking I, 17 with Unbreaking III)
                                 player.getStackInHand(hand).damage(38, player, LivingEntity.getSlotForHand(hand));
                                 player.getItemCooldownManager().set(player.getStackInHand(hand), 10);
                                 world.spawnEntity(windCharge);
+                                player.swingHand(hand, true);
                                 return ActionResult.SUCCESS;
                             }
                             // The higher tier "Wind Slam", the less damage the mace takes when used. "Unbreaking" enchantment lets the mace be used even longer.
@@ -68,9 +70,11 @@ public abstract class MaceMixin extends Item {
                                     switch (WindSlamLV) {
                                         case 1:
                                             player.getStackInHand(hand).damage(76, player, LivingEntity.getSlotForHand(hand));
+                                            player.swingHand(hand, true);
                                             return ActionResult.SUCCESS;
                                         case 2:
                                             player.getStackInHand(hand).damage(64, player, LivingEntity.getSlotForHand(hand));
+                                            player.swingHand(hand, true);
                                             return ActionResult.SUCCESS;
                                     }
                                 }
@@ -84,10 +88,12 @@ public abstract class MaceMixin extends Item {
                                             case 1:
                                                 // 5 uses until repair needed (10 with Unbreaking I, 19 with Unbreaking III)
                                                 player.getStackInHand(hand).damage(32, player, LivingEntity.getSlotForHand(hand));
+                                                player.swingHand(hand, true);
                                                 return ActionResult.SUCCESS;
                                             case 2:
                                                 // 6 uses until repair needed (12 with Unbreaking I, 23 with Unbreaking III)
                                                 player.getStackInHand(hand).damage(25, player, LivingEntity.getSlotForHand(hand));
+                                                player.swingHand(hand, true);
                                                 return ActionResult.SUCCESS;
                                         }
                                     } else {
@@ -95,10 +101,12 @@ public abstract class MaceMixin extends Item {
                                             case 1:
                                                 // 4 uses until repair needed (8 with Unbreaking I, 17 with Unbreaking III)
                                                 player.getStackInHand(hand).damage(38, player, LivingEntity.getSlotForHand(hand));
+                                                player.swingHand(hand, true);
                                                 return ActionResult.SUCCESS;
                                             case 2:
                                                 // 5 uses until repair needed (10 with Unbreaking I, 19 with Unbreaking III)
                                                 player.getStackInHand(hand).damage(32, player, LivingEntity.getSlotForHand(hand));
+                                                player.swingHand(hand, true);
                                                 return ActionResult.SUCCESS;
                                         }
                                     }
