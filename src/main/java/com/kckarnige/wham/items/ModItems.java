@@ -24,7 +24,8 @@ public class ModItems {
     }
 
     private static Item registerItem (String id, Item.Settings item) {
-        // This is why we 
+        // This is why plan ahead (don't ask why it took 2 commits to finish this thought)
+        // Idk why tf I'm talking, I didn't plan shit 💀
         RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(wham.MOD_ID, id));
         return Registry.register(Registries.ITEM, key, new Item(item.registryKey(key)));
     }
