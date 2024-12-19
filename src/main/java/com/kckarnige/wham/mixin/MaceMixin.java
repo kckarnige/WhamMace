@@ -40,70 +40,28 @@ public abstract class MaceMixin extends Item {
                             windCharge.setPosition(player.getPos());
                             windCharge.setVelocity(0.0, -2.0, 0.0);
 
-                            if ((MidnightConfigStuff.DEFAULT_BOUNCE) && !player.isSneaking()) {
-                                // 4 uses until repair needed (8 with Unbreaking I, 17 with Unbreaking III)
-                                player.getStackInHand(hand).damage(38, player, LivingEntity.getSlotForHand(hand));
-                                player.getItemCooldownManager().set(this, 10);
-                                world.spawnEntity(windCharge);
-                                return TypedActionResult.success(player.getStackInHand(hand));
-                            } else if ((MidnightConfigStuff.DEFAULT_BOUNCE) && !(MidnightConfigStuff.BIG_BOUNCE)) {
-                                // 4 uses until repair needed (8 with Unbreaking I, 17 with Unbreaking III)
-                                player.getStackInHand(hand).damage(38, player, LivingEntity.getSlotForHand(hand));
-                                player.getItemCooldownManager().set(this, 10);
-                                world.spawnEntity(windCharge);
-                                return TypedActionResult.success(player.getStackInHand(hand));
-                            }
-                            // The higher tier "Wind Slam", the less damage the mace takes when used. "Unbreaking" enchantment lets the mace be used even longer.
                             int WindSlamLV = EnchantmentHelper.getLevel(world.getRegistryManager().getWrapperOrThrow(RegistryKeys.ENCHANTMENT).getOrThrow(WhamEnchantment.WIND_BOUNCE), player.getStackInHand(hand));
+                            // The higher tier "Wind Slam", the less damage the mace takes when used. "Unbreaking" enchantment lets the mace be used even longer.
                             if (WindSlamLV != 0) {
-
-                                if (player.isSneaking() && (MidnightConfigStuff.BIG_BOUNCE)) {
-                                    player.getItemCooldownManager().set(this, 30);
-
-                                    WindChargeEntity windCharge2 = new WindChargeEntity(EntityType.BREEZE_WIND_CHARGE, world);
-                                    windCharge2.setPosition(player.getPos());
-                                    windCharge2.setVelocity(0.0, -2.0, 0.0);
-                                    world.spawnEntity(windCharge2);
-                                    world.spawnEntity(windCharge);
-
-                                    switch (WindSlamLV) {
-                                        case 1:
-                                            player.getStackInHand(hand).damage(76, player, LivingEntity.getSlotForHand(hand));
-                                            return TypedActionResult.success(player.getStackInHand(hand));
-                                        case 2:
-                                            player.getStackInHand(hand).damage(64, player, LivingEntity.getSlotForHand(hand));
-                                            return TypedActionResult.success(player.getStackInHand(hand));
-                                    }
+                                player.getItemCooldownManager().set(this, 10);
+                                world.spawnEntity(windCharge);
+                                switch (WindSlamLV) {
+                                    case 1:
+                                        // 4 uses until repair needed (8 with Unbreaking I)
+                                        player.getStackInHand(hand).damage(38, player, LivingEntity.getSlotForHand(hand));
+                                        return TypedActionResult.success(player.getStackInHand(hand));
+                                    case 2:
+                                        // 6 uses until repair needed (12 with Unbreaking I)
+                                        player.getStackInHand(hand).damage(25, player, LivingEntity.getSlotForHand(hand));
+                                        return TypedActionResult.success(player.getStackInHand(hand));
                                 }
-                                else {
+                            } else {
+                                if (MidnightConfigStuff.DEFAULT_BOUNCE) {
+                                    // 2 uses until repair needed (4 with Unbreaking I)
+                                    player.getStackInHand(hand).damage(78, player, LivingEntity.getSlotForHand(hand));
                                     player.getItemCooldownManager().set(this, 10);
                                     world.spawnEntity(windCharge);
-
-
-                                    if ((MidnightConfigStuff.DEFAULT_BOUNCE)) {
-                                        switch (WindSlamLV) {
-                                            case 1:
-                                                // 5 uses until repair needed (10 with Unbreaking I, 19 with Unbreaking III)
-                                                player.getStackInHand(hand).damage(32, player, LivingEntity.getSlotForHand(hand));
-                                                return TypedActionResult.success(player.getStackInHand(hand));
-                                            case 2:
-                                                // 6 uses until repair needed (12 with Unbreaking I, 23 with Unbreaking III)
-                                                player.getStackInHand(hand).damage(25, player, LivingEntity.getSlotForHand(hand));
-                                                return TypedActionResult.success(player.getStackInHand(hand));
-                                        }
-                                    } else {
-                                        switch (WindSlamLV) {
-                                            case 1:
-                                                // 4 uses until repair needed (8 with Unbreaking I, 17 with Unbreaking III)
-                                                player.getStackInHand(hand).damage(38, player, LivingEntity.getSlotForHand(hand));
-                                                return TypedActionResult.success(player.getStackInHand(hand));
-                                            case 2:
-                                                // 5 uses until repair needed (10 with Unbreaking I, 19 with Unbreaking III)
-                                                player.getStackInHand(hand).damage(32, player, LivingEntity.getSlotForHand(hand));
-                                                return TypedActionResult.success(player.getStackInHand(hand));
-                                        }
-                                    }
-
+                                    return TypedActionResult.success(player.getStackInHand(hand));
                                 }
                             }
                         }

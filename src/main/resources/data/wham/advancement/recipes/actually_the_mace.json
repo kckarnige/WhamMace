@@ -31,7 +31,8 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_mace_head"
+      "has_mace_head",
+      "has_mace_tip"
     ]
   ],
   "rewards": {
