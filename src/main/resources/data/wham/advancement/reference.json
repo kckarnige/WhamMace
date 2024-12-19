@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:adventure/minecraft_trials_edition",
+  "criteria": {
+    "has_mace": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:mace"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.wham.reference.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "minecraft:heavy_core"
+    },
+    "title": {
+      "translate": "advancements.wham.reference.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_mace"
+    ]
+  ]
+}
