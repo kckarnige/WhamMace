@@ -15,8 +15,8 @@ import net.minecraft.util.Rarity;
 
 public class ModItems {
 
-    public static final Item MACE_HEAD = registerItem("mace_head", new Item.Settings().rarity(Rarity.EPIC));
-    public static final Item MACE_TIP = registerItem("mace_tip", new Item.Settings().rarity(Rarity.EPIC));
+    public static final Item MACE_HEAD = registerItem("mace_head", new Item.Settings().rarity(Rarity.RARE));
+    public static final Item MACE_TIP = registerItem("mace_tip", new Item.Settings().rarity(Rarity.UNCOMMON));
 
     private static void addItemToItemGroup(FabricItemGroupEntries entries) {
         entries.add(MACE_HEAD);
@@ -31,9 +31,8 @@ public class ModItems {
     }
 
     public static void registerModItems () {
-        wham.LOGGER.info("[Wham!] Things feel different..");
+        wham.LOGGER.info("[Wham!] Spiking up the rattle...");
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemToItemGroup);
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(ModItems::addItemToItemGroup);
     }
 }

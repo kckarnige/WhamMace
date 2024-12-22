@@ -2,12 +2,16 @@ package com.kckarnige.wham.mixin;
 
 import com.kckarnige.wham.config.MidnightConfigStuff;
 import com.kckarnige.wham.enchantments.WhamEnchantment;
+import com.kckarnige.wham.items.ModComponents;
 import net.minecraft.enchantment.EnchantmentHelper;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.WindChargeEntity;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.item.MaceItem;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.ActionResult;
@@ -26,6 +30,21 @@ public abstract class MaceMixin extends Item {
         super(settings);
     }
 
+    public void inventoryTick(ItemStack nullStack, World world, Entity entity, int slot, boolean selected) {
+        if (!world.isClient()) {
+            if (entity instanceof PlayerEntity player) {
+                if (player.getInventory().getMainHandStack().isOf(Items.MACE)) {
+                    if (player.getMainHandStack().getMaxDamage() * 0.70 >= player.getMainHandStack().getMaxDamage() - player.getMainHandStack().getDamage()) {
+                        player.getMainHandStack().remove(ModComponents.WIND_BOUNCE_READY);
+                    } else {
+                        player.getMainHandStack().set(ModComponents.WIND_BOUNCE_READY, true);
+                    }
+                }
+            }
+        }
+    }
+
+
     @Override
     public ActionResult use(World world, PlayerEntity player, Hand hand) {
         if (!world.isClient()) {
@@ -35,12 +54,13 @@ public abstract class MaceMixin extends Item {
                     BlockHitResult blockHit = (BlockHitResult) hit;
                     if (Objects.equals(String.valueOf(blockHit.getSide()), "up")) {
                         if (!(player.getStackInHand(hand).getMaxDamage() * 0.70 >= player.getStackInHand(hand).getMaxDamage() - player.getStackInHand(hand).getDamage())) {
+
                             WindChargeEntity windCharge = new WindChargeEntity(EntityType.WIND_CHARGE, world);
                             windCharge.setPosition(player.getPos());
                             windCharge.setVelocity(0.0, -2.0, 0.0);
 
                             int WindSlamLV = EnchantmentHelper.getLevel(world.getRegistryManager().getOrThrow(RegistryKeys.ENCHANTMENT).getOrThrow(WhamEnchantment.WIND_BOUNCE), player.getStackInHand(hand));
-                            // The higher tier "Wind Slam", the less damage the mace takes when used. "Unbreaking" enchantment lets the mace be used even longer.
+                            // The higher tier "Wind Bounce", the less damage the mace takes when used. "Unbreaking" enchantment lets the mace be used even longer.
                             if (WindSlamLV != 0) {
                                 player.getItemCooldownManager().set(player.getStackInHand(hand), 10);
                                 world.spawnEntity(windCharge);

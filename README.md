@@ -25,7 +25,7 @@ This mod also expands the capabilities of the mace by adding a new enchantment k
 
 > Wind Bounce II does less damage to your mace, and does even less damage when paired with Unbreaking, with Lv I halfing the damage your mace takes.
 
-![crafting example](https://raw.githubusercontent.com/kckarnige/WhamMace/refs/heads/main/wham_craftExample.png)
+![crafting example](https://raw.githubusercontent.com/kckarnige/WhamMace/refs/heads/1.21.4/wham_craftExample.png)
 
 ----
 

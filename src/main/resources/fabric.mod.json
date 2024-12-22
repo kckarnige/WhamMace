@@ -2,8 +2,8 @@
 	"schemaVersion": 1,
 	"id": "wham",
 	"version": "${version}",
-	"name": "Wham! - A Mace Overhaul",
-	"description": "A mod that gives the mace a complete overhaul!",
+	"name": "Wham!",
+	"description": "A mod that reimagines the mace!",
 	"authors": [
 		"KayoticCarnige"
 	],
@@ -26,17 +26,13 @@
 		]
 	},
 	"mixins": [
-		"wham.mixins.json",
-		{
-			"config": "wham.client.mixins.json",
-			"environment": "client"
-		}
+		"wham.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.16.9",
-		"minecraft": "~1.21.2",
+		"minecraft": "~1.21.4",
 		"java": ">=21",
 		"fabric-api": "*",
-		"midnightlib": ">=1.6.4-fabric"
+		"midnightlib": ">=1.6.5-fabric"
 	}
 }

@@ -1,0 +1,32 @@
+{
+  "model": {
+    "type": "select",
+    "property": "display_context",
+    "cases": [
+      {
+        "when": [
+          "gui",
+          "ground",
+          "fixed"
+        ],
+        "model": {
+          "type": "model",
+          "model": "minecraft:item/mace"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "condition",
+      "property": "has_component",
+      "component": "wham:wind_bounce_ready",
+      "on_true": {
+        "type": "model",
+        "model": "wham:item/mace_hand_wind"
+      },
+      "on_false": {
+        "type": "model",
+        "model": "wham:item/mace_hand"
+      }
+    }
+  }
+}

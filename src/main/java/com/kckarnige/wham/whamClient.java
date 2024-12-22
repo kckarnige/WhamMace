@@ -1,10 +1,24 @@
 package com.kckarnige.wham;
 
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
+import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
+import net.fabricmc.loader.api.FabricLoader;
+import net.fabricmc.loader.api.ModContainer;
+import net.minecraft.util.Identifier;
+
+import static net.fabricmc.fabric.api.resource.ResourcePackActivationType.*;
 
 public class whamClient implements ClientModInitializer {
+
+	public <string> void registerResourcePack(string Path, ResourcePackActivationType ResourcePackType) {
+		ModContainer container = FabricLoader.getInstance().getModContainer(wham.MOD_ID).orElseThrow();
+		ResourceManagerHelper.registerBuiltinResourcePack(Identifier.of(wham.MOD_ID, (String) Path), container, ResourcePackType);
+	}
 	@Override
 	public void onInitializeClient() {
-		// This entrypoint is suitable for setting up client-specific logic, such as rendering.
+		registerResourcePack("perma_wind", NORMAL);
+		registerResourcePack("no_wind", NORMAL);
+		wham.LOGGER.info("[Wham!] This should look nice...");
 	}
 }
