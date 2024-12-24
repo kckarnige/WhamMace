@@ -1,10 +1,12 @@
 package com.kckarnige.wham.blocks;
 
+import com.kckarnige.wham.blocks.NewBlocks.TrapBlock;
 import com.kckarnige.wham.wham;
+import com.mojang.serialization.MapCodec;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
+import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -14,13 +16,18 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.BlockPos;
 
 public class ModBlocks {
 
-    public static final Block SPIKE_TRAP = registerBlock("spike_trap", new Item.Settings(), AbstractBlock.Settings.create()
+    public static final Block SPIKE_TRAP = registerBlock("spike_trap", new Item.Settings(), "trap", AbstractBlock.Settings.create()
             .strength(0.1f)
             .sounds(BlockSoundGroup.METAL)
             .noCollision()
+            .nonOpaque()
+            .ticksRandomly()
+            .blockVision(Blocks::never)
+            .solidBlock(Blocks::never)
             .pistonBehavior(PistonBehavior.DESTROY));
 
 
@@ -30,12 +37,25 @@ public class ModBlocks {
         return Registry.register(Registries.ITEM, itemKey, new BlockItem(block, item.useBlockPrefixedTranslationKey().registryKey(itemKey)));
     }
 
-    private static Block registerBlock(String id, Item.Settings itemSettings, AbstractBlock.Settings blockSettings) {
+    private static Block registerBlock(String id, Item.Settings itemSettings, String type, AbstractBlock.Settings blockSettings) {
         RegistryKey<Block> blockKey = RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(wham.MOD_ID, id));
-        Block block = new Block(blockSettings.registryKey(blockKey));
+        Block block = CustomBlock(blockSettings.registryKey(blockKey), type);
+
 
         registerBlockItem(id, itemSettings, block);
         return Registry.register(Registries.BLOCK, blockKey, block);
+    }
+
+    private static Block CustomBlock(AbstractBlock.Settings settings, String type) {
+        if (type != null) {
+            if (type.equals("trap")) {
+                return new TrapBlock(settings);
+            } else {
+                return new Block(settings);
+            }
+        } else {
+            return new Block(settings);
+        }
     }
 
     public static void registerModBlocks() {
