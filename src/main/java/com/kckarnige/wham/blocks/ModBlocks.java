@@ -39,23 +39,16 @@ public class ModBlocks {
 
     private static Block registerBlock(String id, Item.Settings itemSettings, String type, AbstractBlock.Settings blockSettings) {
         RegistryKey<Block> blockKey = RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(wham.MOD_ID, id));
-        Block block = CustomBlock(blockSettings.registryKey(blockKey), type);
+        Block block;
+        if (type.equals("trap")) {
+            block = new TrapBlock(blockSettings.registryKey(blockKey));
+        } else {
+            block = new Block(blockSettings.registryKey(blockKey));
+        }
 
 
         registerBlockItem(id, itemSettings, block);
         return Registry.register(Registries.BLOCK, blockKey, block);
-    }
-
-    private static Block CustomBlock(AbstractBlock.Settings settings, String type) {
-        if (type != null) {
-            if (type.equals("trap")) {
-                return new TrapBlock(settings);
-            } else {
-                return new Block(settings);
-            }
-        } else {
-            return new Block(settings);
-        }
     }
 
     public static void registerModBlocks() {

@@ -3,16 +3,10 @@ package com.kckarnige.wham.blocks.NewBlocks;
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.ai.pathing.NavigationType;
-import net.minecraft.entity.damage.DamageScaling;
-import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.entity.damage.DamageType;
-import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.shape.VoxelShape;
-import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 
@@ -21,6 +15,11 @@ public class TrapBlock extends SweetBerryBushBlock {
     //public static final DamageSource SPIKE_DMG = new DamageSource(RegistryEntry.of(spikeDmgSrc));
     public TrapBlock(Settings settings) {
         super(settings);
+    }
+
+    @Override
+    protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
+        return !floor.isOf(Blocks.AIR);
     }
 
     @Override
@@ -34,4 +33,10 @@ public class TrapBlock extends SweetBerryBushBlock {
             }
         super.onSteppedOn(world, pos, state, entity);
     }
+
+    @Override
+    protected VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+        return Block.createCuboidShape(2.0, 0.0, 2.0, 14.0, 3.0, 14.0);
+    }
+
 }
