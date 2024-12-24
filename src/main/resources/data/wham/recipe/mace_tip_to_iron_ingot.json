@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    [
+      "wham:mace_tip"
+    ],
+    [
+      "wham:mace_tip"
+    ],
+    [
+      "wham:mace_tip"
+    ],
+    [
+      "wham:mace_tip"
+    ]
+  ],
+  "result": {
+    "id": "minecraft:iron_ingot",
+    "count": 1
+  }
+}
