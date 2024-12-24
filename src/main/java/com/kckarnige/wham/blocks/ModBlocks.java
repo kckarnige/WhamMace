@@ -1,7 +1,6 @@
 package com.kckarnige.wham.blocks;
 
 import com.kckarnige.wham.wham;
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -25,21 +24,22 @@ public class ModBlocks {
             .pistonBehavior(PistonBehavior.DESTROY));
 
 
-    private static Item registerBlockItem (Item.Settings item, AbstractBlock.Settings blockSettings, RegistryKey<Item> itemKey) {
+    private static Item registerBlockItem (String id, Item.Settings item, Block block) {
         //1.21.2+ block reg sucks
-        return Registry.register(Registries.ITEM, itemKey, new BlockItem(new Block(blockSettings), item.useBlockPrefixedTranslationKey().registryKey(itemKey)));
+        RegistryKey<Item> itemKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(wham.MOD_ID, id));
+        return Registry.register(Registries.ITEM, itemKey, new BlockItem(block, item.useBlockPrefixedTranslationKey().registryKey(itemKey)));
     }
 
     private static Block registerBlock(String id, Item.Settings itemSettings, AbstractBlock.Settings blockSettings) {
-        RegistryKey<Item> itemKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(wham.MOD_ID, id));
         RegistryKey<Block> blockKey = RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(wham.MOD_ID, id));
+        Block block = new Block(blockSettings.registryKey(blockKey));
 
-        registerBlockItem(itemSettings, blockSettings, itemKey);
-        return Registry.register(Registries.BLOCK, blockKey, new Block(blockSettings.registryKey(blockKey)));
+        registerBlockItem(id, itemSettings, block);
+        return Registry.register(Registries.BLOCK, blockKey, block);
     }
 
     public static void registerModBlocks() {
-        wham.LOGGER.info("GOOD MORNING NIGHT CITY!!");
-        //ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> entries.add(SPIKE_TRAP));
+        wham.LOGGER.info("[Wham!] Spiking up the floor...");
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> entries.add(SPIKE_TRAP));
     }
 }
