@@ -1,4 +1,4 @@
-package com.kckarnige.wham.mixin.client;
+package com.kckarnige.wham.helper;
 
 import net.minecraft.client.render.model.ModelBaker;
 import net.minecraft.client.util.ModelIdentifier;

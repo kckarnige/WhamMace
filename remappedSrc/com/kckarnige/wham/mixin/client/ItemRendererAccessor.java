@@ -1,4 +1,4 @@
-package com.kckarnige.wham.mixin.client;
+package com.kckarnige.wham.helper;
 
 import net.minecraft.client.render.item.ItemRenderer;
 import net.minecraft.client.render.model.BakedModelManager;

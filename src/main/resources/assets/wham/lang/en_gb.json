@@ -17,6 +17,11 @@
     "wham.midnightconfig.MACE_WINDU":"Display Wind on 3D Mace Model",
     "wham.midnightconfig.MACE_WINDU_4EVS":"Always Display Wind on Mace",
 
+    "death.attack.spikes": "%1$s stepped on something pointy",
+    "death.attack.spikes.player": "%1$s hurt their feet while trying to escape %2$s",
+    "death.attack.spikes_fall": "%1$s broke their fall on a bed of spikes",
+    "death.attack.spikes_fall.player": "%1$s tripped into a bed of spikes escaping %2$s",
+
     "enchantment_lore.wham:wind_bounce.lore": "Within this ancient tome lies the stories of an ancient civilization which took pride in the powers and gifts brought by the airs and winds, this was the same civilization responsible for the first documented discovery of the Breeze.\n\nEven though this book has hundreds of pages, it's lighter than a feather.",
     "enchantment_lore.wham:wind_bounce.description": "§nWind Bounce§r\n\nMax Level: II\n\nCompatible with: Mace\n\nUsing the mace on the ground launches the wielder into the air, doing so does a considerable amount of damage to the mace.\n\nUsing while crouched will have the wielder launch higher, and deal double the damage to the mace.\n\nThe higher the level the less damage the mace takes when using this ability."
 }

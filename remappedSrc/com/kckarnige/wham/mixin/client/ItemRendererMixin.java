@@ -1,4 +1,4 @@
-package com.kckarnige.wham.mixin.client;
+package com.kckarnige.wham.helper;
 
 import com.kckarnige.wham.config.MidnightConfigStuff;
 import net.fabricmc.api.EnvType;

@@ -3,40 +3,44 @@ package com.kckarnige.wham.blocks.NewBlocks;
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.damage.DamageType;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Vec3d;
+import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 
-public class TrapBlock extends SweetBerryBushBlock {
-    //public static final DamageType spikeDmgSrc = new DamageType("spikes", DamageScaling.WHEN_CAUSED_BY_LIVING_NON_PLAYER, 0.1F);
-    //public static final DamageSource SPIKE_DMG = new DamageSource(RegistryEntry.of(spikeDmgSrc));
+public class TrapBlock extends ShortPlantBlock {
+    public static final RegistryKey<DamageType> SPIKE_DMG = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, Identifier.of("wham", "spikes"));
+    public static final RegistryKey<DamageType> SPIKE_FALL_DMG = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, Identifier.of("wham", "spikes_fall"));
     public TrapBlock(Settings settings) {
         super(settings);
     }
 
     @Override
     protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
-        return !floor.isOf(Blocks.AIR);
+        return !floor.isOf(Blocks.AIR) && floor.isSideSolidFullSquare(world,pos,Direction.UP) || floor.isOf(Blocks.HOPPER);
     }
 
     @Override
-    protected void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
-        if (world instanceof ServerWorld serverWorld)
-            if (entity instanceof LivingEntity livingEntity) {
-                if (!livingEntity.isSneaking()) {
-                    livingEntity.slowMovement(state, new Vec3d(0.8F, 0.75, 0.8F));
-                    livingEntity.damage(serverWorld, world.getDamageSources().sweetBerryBush(),1.0f);
+    public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
+        if (entity instanceof LivingEntity) {
+            if (world instanceof ServerWorld serverWorld) {
+                if (!entity.isSneaking() && entity.isOnGround()) {
+                    entity.damage(serverWorld, world.getDamageSources().create(SPIKE_DMG), 1.5F);
                 }
+                entity.handleFallDamage(entity.fallDistance + 2.0F, 2.0F, entity.getDamageSources().create(SPIKE_FALL_DMG));
             }
-        super.onSteppedOn(world, pos, state, entity);
+        }
     }
 
     @Override
     protected VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return Block.createCuboidShape(2.0, 0.0, 2.0, 14.0, 3.0, 14.0);
+        return Block.createCuboidShape(1.5, 0.0, 1.5, 14.5, 3.0, 14.5);
     }
 
 }
