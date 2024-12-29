@@ -2,26 +2,28 @@
     "item.wham.mace_head": "Mace Head",
     "item.wham.mace_tip": "Mace Tip",
     "block.wham.spike_trap": "Spike Trap",
-    "enchantment.wham.wind_bounce": "Wind Bounce",
+    "enchantment.wham.wind_control": "Wind Control",
     "advancements.wham.reference.title": "Now THAT'LL pack a punch!",
     "advancements.wham.reference.description": "Craft a mace.",
-
-    "wham.midnightconfig.title":"Wham! Config",
-
-    "wham.midnightconfig.category.server": "Server",
-    "wham.midnightconfig.DEFAULT_BOUNCE":"Use 'Wind Bounce' Without Enchant",
-    "wham.midnightconfig.DEFAULT_BOUNCE.tooltip":"Enables the Mace's ability to 'Wind Bounce' even without the enchantment.\n\nThe enchantment is still obtainable and does still work as intended.",
-
-    "wham.midnightconfig.category.client": "Client",
-    "wham.midnightconfig.MACE_MODEL":"Use 3D Mace Model",
-    "wham.midnightconfig.MACE_WINDU":"Display Wind on 3D Mace Model",
-    "wham.midnightconfig.MACE_WINDU_4EVS":"Always Display Wind on Mace",
-
     "death.attack.spikes": "%1$s stepped on something pointy",
     "death.attack.spikes.player": "%1$s hurt their feet while trying to escape %2$s",
     "death.attack.spikes_fall": "%1$s broke their fall on a bed of spikes",
     "death.attack.spikes_fall.player": "%1$s tripped into a bed of spikes escaping %2$s",
 
-    "enchantment_lore.wham:wind_bounce.lore": "Within this ancient tome lies the stories of an ancient civilization which took pride in the powers and gifts brought by the airs and winds, this was the same civilization responsible for the first documented discovery of the Breeze.\n\nEven though this book has hundreds of pages, it's lighter than a feather.",
-    "enchantment_lore.wham:wind_bounce.description": "§nWind Bounce§r\n\nMax Level: II\n\nCompatible with: Mace\n\nUsing the mace on the ground launches the wielder into the air, doing so does a considerable amount of damage to the mace.\n\nUsing while crouched will have the wielder launch higher, and deal double the damage to the mace.\n\nThe higher the level the less damage the mace takes when using this ability."
+    "wham.midnightconfig.title": "Wham! Config",
+
+    "wham.midnightconfig.abilityConfigSet": "⟞ Abilities ⟝",
+    "wham.midnightconfig.AIR_LIFT": "Enable 'Air Lift'",
+    "wham.midnightconfig.AIR_LIFT.tooltip": "Enables the Mace's 'Air Lift' ability when enchanted with Wind Control II.",
+    "wham.midnightconfig.AIR_SLAM": "Enable 'Air Slam'",
+    "wham.midnightconfig.AIR_SLAM.tooltip": "Enables the Mace's 'Air Slam' ability.\n\nThis can be performed when attacking an airborne entity.",
+
+    "wham.midnightconfig.enchantmentConfigSet": "⟞ Enchantments ⟝",
+    "wham.midnightconfig.DEFAULT_BOUNCE": "Use 'Wind Bounce' Without Enchant",
+    "wham.midnightconfig.DEFAULT_BOUNCE.tooltip": "Enables the Mace's ability to 'Wind Bounce' even without Wind Control.\n\nThe enchantment is still obtainable and does still work as intended.",
+    "wham.midnightconfig.LOWER_LEVEL_LIFT": "Lower 'Air Lift' Requirement",
+    "wham.midnightconfig.LOWER_LEVEL_LIFT.tooltip": "Allows 'Air Lift' ability to be used with Wind Control I.",
+
+    "enchantment_lore.wham:wind_control.lore": "Within this ancient tome lies the stories of an ancient civilization which took pride in the power and gifts brought by the air and winds, this is the same civilization responsible for the first documented sighting of the Breeze, or as they knew it, ''The God of Winds''.\n\nEven though this book has hundreds of pages, it's as light as a feather.",
+    "enchantment_lore.wham:wind_control.description": "§nWind Control§r\n\nMax Level: II\n\nCompatible with: Mace\n\nUsing the mace on the ground launches the wielder into the air, doing so does a considerable amount of damage to the mace.\n\nAttacking an airborne enemy will do heavy damage an slam them on the ground.\n\nAt higher levels, the user can also 'scoop' enemies infront of them into the air."
 }

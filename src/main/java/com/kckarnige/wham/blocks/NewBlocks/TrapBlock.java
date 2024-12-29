@@ -3,6 +3,7 @@ package com.kckarnige.wham.blocks.NewBlocks;
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.entity.damage.DamageType;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
@@ -10,11 +11,14 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.minecraft.world.WorldView;
+import net.minecraft.world.tick.ScheduledTickView;
 
-public class TrapBlock extends ShortPlantBlock {
+public class TrapBlock extends Block {
     public static final RegistryKey<DamageType> SPIKE_DMG = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, Identifier.of("wham", "spikes"));
     public static final RegistryKey<DamageType> SPIKE_FALL_DMG = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, Identifier.of("wham", "spikes_fall"));
     public TrapBlock(Settings settings) {
@@ -22,8 +26,14 @@ public class TrapBlock extends ShortPlantBlock {
     }
 
     @Override
-    protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
+    protected boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
+        BlockState floor = world.getBlockState(pos.down());
         return !floor.isOf(Blocks.AIR) && floor.isSideSolidFullSquare(world,pos,Direction.UP) || floor.isOf(Blocks.HOPPER);
+    }
+
+    @Override
+    protected boolean canPathfindThrough(BlockState state, NavigationType type) {
+        return true;
     }
 
     @Override
@@ -36,6 +46,22 @@ public class TrapBlock extends ShortPlantBlock {
                 entity.handleFallDamage(entity.fallDistance + 2.0F, 2.0F, entity.getDamageSources().create(SPIKE_FALL_DMG));
             }
         }
+    }
+
+    @Override
+    protected BlockState getStateForNeighborUpdate(
+            BlockState state,
+            WorldView world,
+            ScheduledTickView tickView,
+            BlockPos pos,
+            Direction direction,
+            BlockPos neighborPos,
+            BlockState neighborState,
+            Random random
+    ) {
+        return !state.canPlaceAt(world, pos)
+                ? Blocks.AIR.getDefaultState()
+                : super.getStateForNeighborUpdate(state, world, tickView, pos, direction, neighborPos, neighborState, random);
     }
 
     @Override

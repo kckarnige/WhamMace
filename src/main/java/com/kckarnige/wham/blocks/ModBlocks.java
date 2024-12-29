@@ -18,20 +18,20 @@ import net.minecraft.util.Identifier;
 public class ModBlocks {
 
     public static final Block SPIKE_TRAP = registerBlock("spike_trap", new Item.Settings(), "trap", AbstractBlock.Settings.create()
-            .strength(0.1f)
+            .strength(0.24f)
             .sounds(BlockSoundGroup.METAL)
             .noCollision()
             .nonOpaque()
-            .ticksRandomly()
+            .velocityMultiplier(0.25f)
             .blockVision(Blocks::never)
             .solidBlock(Blocks::never)
             .pistonBehavior(PistonBehavior.DESTROY));
 
 
-    private static Item registerBlockItem (String id, Item.Settings item, Block block) {
+    private static void registerBlockItem (String id, Item.Settings item, Block block) {
         //1.21.2+ block reg sucks
         RegistryKey<Item> itemKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(wham.MOD_ID, id));
-        return Registry.register(Registries.ITEM, itemKey, new BlockItem(block, item.useBlockPrefixedTranslationKey().registryKey(itemKey)));
+        Registry.register(Registries.ITEM, itemKey, new BlockItem(block, item.useBlockPrefixedTranslationKey().registryKey(itemKey)));
     }
 
     private static Block registerBlock(String id, Item.Settings itemSettings, String type, AbstractBlock.Settings blockSettings) {
@@ -50,6 +50,6 @@ public class ModBlocks {
 
     public static void registerModBlocks() {
         wham.LOGGER.info("[Wham!] Spiking up the floor...");
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> entries.add(SPIKE_TRAP));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> entries.add(SPIKE_TRAP));
     }
 }
