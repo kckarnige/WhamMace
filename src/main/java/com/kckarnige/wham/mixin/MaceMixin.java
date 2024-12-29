@@ -143,7 +143,7 @@ public abstract class MaceMixin extends Item {
     @Override
     public void postDamageEntity(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         if (MidnightConfigStuff.AIR_SLAM) {
-            if(!target.isOnGround() && attacker.isPlayer()) {
+            if(!target.isOnGround() && attacker.isPlayer() && !attacker.isOnGround()) {
                 target.addVelocity(0.0,-2.0,0.0);
                 target.playSound(SoundEvents.ITEM_MACE_SMASH_AIR);
                 target.damage((ServerWorld) target.getWorld(),target.getWorld().getDamageSources().maceSmash(attacker),12f);
