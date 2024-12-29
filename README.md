@@ -10,8 +10,8 @@
 )
 ](https://modrinth.com/mod/wham-mace)
 
-Credit to [GugerOS](https://modrinth.com/user/GugerOS) for making the base model, and [Volery](https://modrinth.com/user/Volery) for the mace code!    
-Go check out [GugerOS's Better Mace Hammer](https://modrinth.com/resourcepack/better-mace-hammer) resource pack, [Volery's Mace but 3D](https://modrinth.com/mod/mace-but-3d), this project wouldn't exist without them!
+Credit to [GugerOS](https://modrinth.com/user/GugerOS) for making the base for my mace model, [Daniel Krafft](https://www.youtube.com/channel/UCojEXrCBzO-cP2N5YlRcrWw) for HEAVILY inspiring the design for the mace, and [Volery](https://modrinth.com/user/Volery) for their [3D mace](https://github.com/Volery39/MaceBut3D) display a 3D model *(pre-1.21.4)*!    
+Go check out [GugerOS's Better Mace Hammer](https://modrinth.com/resourcepack/better-mace-hammer) resource pack, [Daniel Krafft's video](https://youtu.be/vAJ-ORXQnCM), and [Volery's Mace but 3D](https://modrinth.com/mod/mace-but-3d) (1.21 - 1.21.3) this project wouldn't exist without them!
 
 ----
 
@@ -21,9 +21,9 @@ Go check out [GugerOS's Better Mace Hammer](https://modrinth.com/resourcepack/be
 
 This mod gives the mace a complete overhaul, making it as special as the trident, featuring a 3D model when equiped, with a nice 2D icon in the inventory.
 
-This mod also expands the capabilities of the mace by adding a new enchantment known as "Wind Bounce", just hit the floor and kiss the ground goodbye! Be cautious however, Wind Bouncing can take a toll on your mace when used, so make sure to use your mace wisely!
+This mod also expands the capabilities of the mace by adding a new enchantment known as "Wind Control", just hit the floor and kiss the ground goodbye! Be cautious however, bouncing around will take a toll on your mace, so make sure to bounce responsibly!
 
-> Wind Bounce II does less damage to your mace, and does even less damage when paired with Unbreaking, with Lv I halfing the damage your mace takes.
+> Wind Control II does less damage to your mace, and does even less damage when paired with Unbreaking, with Lv I halfing the damage your mace takes.
 
 ![crafting example](https://raw.githubusercontent.com/kckarnige/WhamMace/refs/heads/1.21.4/wham_craftExample.png)
 
