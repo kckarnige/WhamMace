@@ -94,7 +94,6 @@ public abstract class MaceMixin extends Item {
                                             if (target != null) {
                                                 if (player.canSee(target)) {
                                                     target.setVelocity(0, 0.25, 0);
-                                                    player.addVelocity(0, 0.6, 0);
                                                 }
                                             }
                                         }
@@ -103,22 +102,20 @@ public abstract class MaceMixin extends Item {
                                         // 6 uses until repair needed (12 with Unbreaking I)
                                         player.getStackInHand(hand).damage(25, player, LivingEntity.getSlotForHand(hand));
                                         if (MidnightConfigStuff.AIR_LIFT) {
-                                            Box myBox = new Box(player.getBlockPos()).expand(2.5);
+                                            Box myBox = new Box(player.getBlockPos()).expand(2.5f);
                                             Entity target = null;
                                             List<MobEntity> entitiyList = player.getWorld().getEntitiesByClass(MobEntity.class, myBox, LivingEntity::isAlive);
                                             try {
                                                 target = entitiyList.getFirst();
                                             } catch (Exception ignored) {
                                                 try {
-                                                    target = world.getClosestPlayer(player, 2.5);
+                                                    target = world.getClosestPlayer(player, 2.5f);
                                                 } catch (Exception ignored2) {
                                                 }
                                             }
                                             if (target != null) {
-                                                if (player.canSee(target)) {
-                                                    target.setVelocity(0, 0.25, 0);
-                                                    player.addVelocity(0, 0.6, 0);
-                                                }
+                                                target.addVelocity(0, 0.5, 0);
+                                                player.addVelocity(0, 0.25, 0);
                                             }
                                         }
                                         return CompleteAction(player, hand);
@@ -143,8 +140,9 @@ public abstract class MaceMixin extends Item {
     @Override
     public void postDamageEntity(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         if (MidnightConfigStuff.AIR_SLAM) {
-            if(!target.isOnGround() && attacker.isPlayer() && !attacker.isOnGround()) {
-                target.addVelocity(0.0,-2.0,0.0);
+            if (!target.isOnGround() && attacker.isPlayer() && !attacker.isOnGround()) {
+                target.addVelocity(0.0,-4.0,0.0);
+                target.fallDistance = 40;
                 target.playSound(SoundEvents.ITEM_MACE_SMASH_AIR);
                 target.damage((ServerWorld) target.getWorld(),target.getWorld().getDamageSources().maceSmash(attacker),12f);
             }

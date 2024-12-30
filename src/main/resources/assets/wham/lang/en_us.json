@@ -3,12 +3,20 @@
     "item.wham.mace_tip": "Mace Tip",
     "block.wham.spike_trap": "Spike Trap",
     "enchantment.wham.wind_control": "Wind Control",
+
     "advancements.wham.reference.title": "Now THAT'LL pack a punch!",
     "advancements.wham.reference.description": "Craft a mace.",
+
     "death.attack.spikes": "%1$s stepped on something pointy",
     "death.attack.spikes.player": "%1$s hurt their feet while trying to escape %2$s",
     "death.attack.spikes_fall": "%1$s broke their fall on a bed of spikes",
     "death.attack.spikes_fall.player": "%1$s tripped into a bed of spikes escaping %2$s",
+
+    "pack.wham.perma_wind.name": "(Wham\u00A76!\u00A7r) Unlimited Air",
+    "pack.wham.perma_wind.description": "Always show wind on, even with low durability.",
+
+    "pack.wham.no_wind.name": "(Wham\u00A76!\u00A7r) Basic Bludgeon",
+    "pack.wham.no_wind.description": "Disable showing wind on mace at all.",
 
     "wham.midnightconfig.title": "Wham! Config",
 

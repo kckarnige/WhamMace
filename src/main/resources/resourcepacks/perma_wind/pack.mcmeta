@@ -1,6 +1,8 @@
 {
     "pack": {
-        "description": "\u00A7b\u00A7oAlways show wind on mace.\u00A7r\n",
+        "description": {
+            "translate": "pack.wham.perma_wind.description"
+        },
         "pack_format": 46
     }
 }

@@ -8,21 +8,22 @@ import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
 import net.fabricmc.loader.api.ModContainer;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 import static net.fabricmc.fabric.api.resource.ResourcePackActivationType.*;
 
 public class whamClient implements ClientModInitializer {
 
-	public <string> void registerResourcePack(string Path, ResourcePackActivationType ResourcePackType) {
+	public <string> void registerResourcePack(string Path, ResourcePackActivationType ResourcePackType, Text PackName) {
 		ModContainer container = FabricLoader.getInstance().getModContainer(wham.MOD_ID).orElseThrow();
-		ResourceManagerHelper.registerBuiltinResourcePack(Identifier.of(wham.MOD_ID, (String) Path), container, ResourcePackType);
+		ResourceManagerHelper.registerBuiltinResourcePack(Identifier.of(wham.MOD_ID, (String) Path), container, PackName, ResourcePackType);
 	}
 	@Override
 	public void onInitializeClient() {
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SPIKE_TRAP, RenderLayer.getCutout());
-		registerResourcePack("perma_wind", NORMAL);
-		registerResourcePack("no_wind", NORMAL);
+		registerResourcePack("perma_wind", NORMAL, Text.translatable("pack.wham.perma_wind.name"));
+		registerResourcePack("no_wind", NORMAL, Text.translatable("pack.wham.no_wind.name"));
 		wham.LOGGER.info("[Wham!] This should look nice...");
 	}
 }
