@@ -1,6 +1,7 @@
 package com.kckarnige.wham;
 
 import com.kckarnige.wham.blocks.ModBlocks;
+import com.kckarnige.wham.config.MidnightConfigStuff;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
@@ -22,8 +23,10 @@ public class whamClient implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
 		BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SPIKE_TRAP, RenderLayer.getCutout());
-		registerResourcePack("perma_wind", NORMAL, Text.translatable("pack.wham.perma_wind.name"));
-		registerResourcePack("no_wind", NORMAL, Text.translatable("pack.wham.no_wind.name"));
+		if (!MidnightConfigStuff.REMOVE_RPS) {
+			registerResourcePack("perma_wind", NORMAL, Text.translatable("pack.wham.perma_wind.name"));
+			registerResourcePack("no_wind", NORMAL, Text.translatable("pack.wham.no_wind.name"));
+		}
 		wham.LOGGER.info("[Wham!] This should look nice...");
 	}
 }
