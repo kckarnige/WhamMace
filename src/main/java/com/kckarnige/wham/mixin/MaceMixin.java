@@ -3,10 +3,12 @@ package com.kckarnige.wham.mixin;
 import com.kckarnige.wham.config.MidnightConfigStuff;
 import com.kckarnige.wham.enchantments.WhamEnchantment;
 import com.kckarnige.wham.items.ModComponents;
+import com.kckarnige.wham.wham;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.mob.MobEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.WindChargeEntity;
@@ -102,20 +104,26 @@ public abstract class MaceMixin extends Item {
                                         // 6 uses until repair needed (12 with Unbreaking I)
                                         player.getStackInHand(hand).damage(25, player, LivingEntity.getSlotForHand(hand));
                                         if (MidnightConfigStuff.AIR_LIFT) {
-                                            Box myBox = new Box(player.getBlockPos()).expand(2.5f);
+                                            Box myBox = new Box(player.getBlockPos()).expand(2.5);
                                             Entity target = null;
                                             List<MobEntity> entitiyList = player.getWorld().getEntitiesByClass(MobEntity.class, myBox, LivingEntity::isAlive);
                                             try {
                                                 target = entitiyList.getFirst();
                                             } catch (Exception ignored) {
                                                 try {
-                                                    target = world.getClosestPlayer(player, 2.5f);
+                                                    target = world.getClosestPlayer(player, 2.5);
                                                 } catch (Exception ignored2) {
                                                 }
                                             }
                                             if (target != null) {
-                                                target.addVelocity(0, 0.5, 0);
                                                 player.addVelocity(0, 0.25, 0);
+                                                if (target instanceof HostileEntity) {
+                                                    if (((HostileEntity) target).getTarget() == player) {
+                                                        ((HostileEntity) target).setTarget(null);
+                                                    }
+                                                }
+                                                target.setVelocity(player.getVelocity());
+                                                wham.LOGGER.info(String.valueOf(player.getFacing()));
                                             }
                                         }
                                         return CompleteAction(player, hand);
