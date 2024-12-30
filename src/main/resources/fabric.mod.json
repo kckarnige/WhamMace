@@ -3,7 +3,7 @@
 	"id": "wham",
 	"version": "${version}",
 	"name": "Wham!",
-	"description": "A mod that reimagines the mace!",
+	"description": "A reimagining of the mace, featuring a new block type and some new items!",
 	"authors": [
 		"KayoticCarnige"
 	],
