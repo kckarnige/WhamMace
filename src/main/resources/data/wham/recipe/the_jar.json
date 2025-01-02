@@ -4,17 +4,17 @@
   "pattern": [
     "-*-",
     "=#=",
-    " + "
+    "+++"
   ],
   "key": {
-    "+": "wham:mace_tip",
-    "#": "minecraft:bottle",
+    "+": "minecraft:enchanted_golden_apple",
+    "#": "minecraft:glass_bottle",
     "=": "minecraft:netherite_ingot",
     "-": "minecraft:diamond",
     "*": "minecraft:nether_star"
   },
   "result": {
     "id": "wham:the_jar",
-    "count": 69
+    "count": 23
   }
 }
