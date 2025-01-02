@@ -11,6 +11,7 @@
 ](https://modrinth.com/mod/wham-mace)
 
 Credit to [GugerOS](https://modrinth.com/user/GugerOS) for making the base for my mace model, [Daniel Krafft](https://www.youtube.com/channel/UCojEXrCBzO-cP2N5YlRcrWw) for HEAVILY inspiring the design for the mace, and [Volery](https://modrinth.com/user/Volery) for their [3D mace](https://github.com/Volery39/MaceBut3D) display a 3D model *(pre-1.21.4)*!    
+
 Go check out [GugerOS's Better Mace Hammer](https://modrinth.com/resourcepack/better-mace-hammer) resource pack, [Daniel Krafft's video](https://youtu.be/vAJ-ORXQnCM), and [Volery's Mace but 3D](https://modrinth.com/mod/mace-but-3d) (1.21 - 1.21.3) this project wouldn't exist without them!
 
 ----
