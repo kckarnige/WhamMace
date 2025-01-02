@@ -19,4 +19,5 @@ public class MidnightConfigStuff extends MidnightConfig {
 
     @Comment(category = CONFIG, centered = true) public static Comment miscConfigSet;
     @Entry(category = CONFIG) public static boolean REMOVE_RPS = false;
+    @Entry(category = CONFIG) public static boolean THE_JAR = false;
 }

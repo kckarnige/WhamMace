@@ -1,4 +1,5 @@
 {
+    "item.wham.the_jar": "The Jar",
     "item.wham.mace_head": "Mace Head",
     "item.wham.mace_tip": "Mace Tip",
     "block.wham.spike_trap": "Spike Trap",
@@ -33,8 +34,10 @@
     "wham.midnightconfig.LOWER_LEVEL_LIFT.tooltip": "Allows 'Air Lift' ability to be used with Wind Control I.",
 
     "wham.midnightconfig.miscConfigSet": "⟞ Miscellaneous ⟝",
-    "wham.midnightconfig.REMOVE_RPS": "Remove built-in resource packs.",
+    "wham.midnightconfig.REMOVE_RPS": "Remove Built-in Resource Packs",
     "wham.midnightconfig.REMOVE_RPS.tooltip": "Prevents the mod's built-in resource packs from loading. (Restart Required)",
+    "wham.midnightconfig.THE_JAR": "The Jar",
+    "wham.midnightconfig.THE_JAR.tooltip": "Enables 'The Jar'. (Restart Required)",
 
     "enchantment_lore.wham:wind_control.lore": "Within this ancient tome lies the stories of an ancient civilization which took pride in the power and gifts brought by the air and winds, this is the same civilization responsible for the first documented sighting of the Breeze, or as they knew it, ''The God of Winds''.\n\nEven though this book has hundreds of pages, it's as light as a feather.",
     "enchantment_lore.wham:wind_control.description": "§nWind Control§r\n\nMax Level: II\n\nCompatible with: Mace\n\nUsing the mace on the ground launches the wielder into the air, doing so does a considerable amount of damage to the mace.\n\nAttacking an airborne enemy will do heavy damage an slam them on the ground.\n\nAt higher levels, the user can also 'scoop' enemies infront of them into the air."
