@@ -4,11 +4,7 @@
 
 [![Compatible with Sinytra Connector](https://raw.githubusercontent.com/Sinytra/.github/main/badges/connector/cozy.svg)](https://modrinth.com/mod/connector)
 
-[![CurseForge](https://img.shields.io/curseforge/dt/1110055?style=flat-square&logo=CurseForge&logoColor=f16436&label=CurseForge&labelColor=1a1a1a&color=f16436
-)](https://www.curseforge.com/minecraft/mc-mods/wham-mace)
-[![Modrinth Downloads](https://img.shields.io/modrinth/dt/79WaF2wq?style=flat-square&logo=modrinth&logoColor=1bd96a&label=Modrinth&labelColor=16181c&color=1bd96a
-)
-](https://modrinth.com/mod/wham-mace)
+[![CurseForge](https://img.shields.io/curseforge/dt/1110055?style=flat-square&logo=CurseForge&logoColor=f16436&label=CurseForge&labelColor=1a1a1a&color=f16436)](https://www.curseforge.com/minecraft/mc-mods/wham-mace) [![Modrinth Downloads](https://img.shields.io/modrinth/dt/79WaF2wq?style=flat-square&logo=modrinth&logoColor=1bd96a&label=Modrinth&labelColor=16181c&color=1bd96a)](https://modrinth.com/mod/wham-mace)
 
 Credit to [GugerOS](https://modrinth.com/user/GugerOS) for making the base for my mace model, [Daniel Krafft](https://www.youtube.com/channel/UCojEXrCBzO-cP2N5YlRcrWw) for HEAVILY inspiring the design for the mace, and [Volery](https://modrinth.com/user/Volery) for their [3D mace](https://github.com/Volery39/MaceBut3D) display a 3D model *(pre-1.21.4)*!    
 
