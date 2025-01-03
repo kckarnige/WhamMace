@@ -25,7 +25,7 @@ public class ModItems {
             .nutrition(4)
             .saturationModifier(1.2F)
             .statusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 400, 2), 1.0F)
-            .statusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 6000, 1), 1.0F)
+            .statusEffect(new StatusEffectInstance(StatusEffects.RESISTANCE, 6000, 0), 1.0F)
             .statusEffect(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 6000, 1), 1.0F)
             .statusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 2400, 6), 1.0F)
             .alwaysEdible()
