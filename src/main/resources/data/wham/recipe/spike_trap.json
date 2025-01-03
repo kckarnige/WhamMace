@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "+++"
+  ],
+  "key": {
+    "+": {
+      "item": "wham:mace_tip"
+    }
+  },
+  "result": {
+    "id": "wham:spike_trap",
+    "count": 1
+  }
+}

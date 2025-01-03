@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "-*-",
+    "=#=",
+    "+++"
+  ],
+  "key": {
+    "+": {
+      "item": "minecraft:enchanted_golden_apple"
+    },
+    "#": {
+      "item": "minecraft:glass_bottle"
+    },
+    "=": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "-": {
+      "item": "minecraft:diamond"
+    },
+    "*": {
+      "item": "minecraft:nether_star"
+  }
+  },
+  "result": {
+    "id": "wham:the_jar",
+    "count": 23
+  }
+}

@@ -7,15 +7,9 @@
     "-"
   ],
   "key": {
-    "#": {
-      "item": "wham:mace_head"
-    },
-    "-": {
-      "item": "minecraft:iron_nugget"
-    },
-    "I": {
-      "item": "minecraft:breeze_rod"
-    }
+    "#": "wham:mace_head",
+    "-": "minecraft:iron_nugget",
+    "I": "minecraft:breeze_rod"
   },
   "result": {
     "id": "minecraft:mace",

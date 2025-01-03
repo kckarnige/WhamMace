@@ -2,8 +2,8 @@
 	"schemaVersion": 1,
 	"id": "wham",
 	"version": "${version}",
-	"name": "Wham! - A Mace Overhaul",
-	"description": "A mod that gives the mace a complete overhaul!",
+	"name": "Wham!",
+	"description": "A reimagining of the mace, featuring a new block type and some new items!",
 	"authors": [
 		"KayoticCarnige"
 	],

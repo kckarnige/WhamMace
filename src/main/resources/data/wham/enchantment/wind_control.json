@@ -1,6 +1,6 @@
 {
     "description": {
-      "translate": "enchantment.wham.wind_bounce"
+      "translate": "enchantment.wham.wind_control"
     },
     "supported_items": "minecraft:mace",
     "slots": [
