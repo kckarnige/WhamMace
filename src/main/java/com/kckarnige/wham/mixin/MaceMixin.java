@@ -123,7 +123,6 @@ public abstract class MaceMixin extends Item {
                                                     }
                                                 }
                                                 target.setVelocity(player.getVelocity());
-                                                wham.LOGGER.info(String.valueOf(player.getFacing()));
                                             }
                                         }
                                         return CompleteAction(player, hand);
