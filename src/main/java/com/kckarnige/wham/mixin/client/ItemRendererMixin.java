@@ -1,6 +1,5 @@
 package com.kckarnige.wham.mixin.client;
 
-import com.kckarnige.wham.config.MidnightConfigStuff;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.render.VertexConsumerProvider;
@@ -12,31 +11,24 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
-import org.spongepowered.asm.mixin.Debug;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
 
 import static com.kckarnige.wham.wham.MOD_ID;
 
-@Debug(export = true)
 @Environment(EnvType.CLIENT)
 @Mixin(ItemRenderer.class)
 public abstract class ItemRendererMixin {
     @ModifyVariable(method = "renderItem", at = @At(value = "HEAD"), argsOnly = true)
-    public BakedModel useMaceModel(BakedModel value, ItemStack stack, ModelTransformationMode renderMode, boolean leftHanded, MatrixStack matrices, VertexConsumerProvider vertexConsumers) {
-        if ((MidnightConfigStuff.MACE_MODEL)) {
+    public BakedModel useMaceModel(BakedModel value, ItemStack stack, ModelTransformationMode renderMode, boolean leftHanded, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay) {
         if (stack.isOf(Items.MACE) && renderMode != ModelTransformationMode.GUI && renderMode != ModelTransformationMode.GROUND && renderMode != ModelTransformationMode.FIXED) {
-            if ((MidnightConfigStuff.MACE_WINDU_4EVS)) {
-                return ((ItemRendererAccessor) this).macebut3d$getModels().getModel(ModelIdentifier.ofInventoryVariant(Identifier.of(MOD_ID, "mace_hand_wind")));
+            if (stack.getMaxDamage() * 0.70 >= stack.getMaxDamage() - stack.getDamage()) {
+                return ((ItemRendererAccessor) this).macebut3d$getModels().getModel(ModelIdentifier.ofInventoryVariant(Identifier.of(MOD_ID, "mace_hand")));
             } else {
-                if (!(stack.getMaxDamage() * 0.70 >= stack.getMaxDamage() - stack.getDamage()) && (MidnightConfigStuff.MACE_WINDU)) {
-                    return ((ItemRendererAccessor) this).macebut3d$getModels().getModel(ModelIdentifier.ofInventoryVariant(Identifier.of(MOD_ID, "mace_hand_wind")));
-                } else {
-                    return ((ItemRendererAccessor) this).macebut3d$getModels().getModel(ModelIdentifier.ofInventoryVariant(Identifier.of(MOD_ID, "mace_hand")));
-                }
+                return ((ItemRendererAccessor) this).macebut3d$getModels().getModel(ModelIdentifier.ofInventoryVariant(Identifier.of(MOD_ID, "mace_hand_wind")));
             }
-        }}
+        }
         return value;
     }
 }

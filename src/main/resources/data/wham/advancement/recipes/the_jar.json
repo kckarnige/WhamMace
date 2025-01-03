@@ -1,0 +1,36 @@
+{
+  "parent": "wham:reference",
+  "criteria": {
+    "has_the_jar": {
+      "conditions": {
+        "items": [
+          {
+            "items": "wham:the_jar"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.wham.the_jar.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "wham:the_jar"
+    },
+    "title": {
+      "translate": "advancements.wham.the_jar.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_jar"
+    ]
+  ],
+  "rewards": {
+    "experience": 69
+  }
+}

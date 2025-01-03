@@ -1,0 +1,14 @@
+- Wham! 2.0 -
+
+- Added a new block: The Spike Trap!
+
+- Renamed "Wind Bounce" to "Wind Control"
+(!THE INTERAL NAME WAS ALSO CHANGED MAKE SURE TO BACKUP YOUR WORLD BEFORE UPDATING!)
+
+- Added 'Air Slam' to the mace and 'Air Lift' to maces with Wind Control II
+
+- Overhauled config screen
+
+- Changed how 3D mace is rendered (1.21.4 changes)
+
+- A few insignificant changes, like changes to item rarity
