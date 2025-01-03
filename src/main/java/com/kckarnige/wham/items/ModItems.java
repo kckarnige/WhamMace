@@ -33,7 +33,7 @@ public class ModItems {
                     new ApplyEffectsConsumeEffect(
                             List.of(
                                     new StatusEffectInstance(StatusEffects.REGENERATION, 400, 2),
-                                    new StatusEffectInstance(StatusEffects.RESISTANCE, 6000, 1),
+                                    new StatusEffectInstance(StatusEffects.RESISTANCE, 6000, 0),
                                     new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 6000, 1),
                                     new StatusEffectInstance(StatusEffects.ABSORPTION, 2400, 6)
                             )
