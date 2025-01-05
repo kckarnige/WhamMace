@@ -12,7 +12,7 @@ Go check out [GugerOS's Better Mace Hammer](https://modrinth.com/resourcepack/be
 
 ----
 
-[![teaser vid](https://img.youtube.com/vi/VTTuhlxPds0/hqdefault.jpg)](https://www.youtube.com/watch?v=VTTuhlxPds0)
+[![teaser vid](https://img.youtube.com/vi/BVWEEPgVJUc/hqdefault.jpg)](https://www.youtube.com/watch?v=BVWEEPgVJUc)
 
 ----
 
