@@ -1,4 +1,4 @@
-![mod title](https://kckarnige.github.io/res/wham_title.png)
+![mod title](https://kckarnige.github.io/res/wham/logo.png)
 
 ----
 
