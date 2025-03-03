@@ -3,13 +3,13 @@ package com.kckarnige.wham.items;
 import com.kckarnige.wham.config.MidnightConfigStuff;
 import com.kckarnige.wham.wham;
 
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.component.type.FoodComponent;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
+import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -31,11 +31,6 @@ public class ModItems {
             .alwaysEdible()
             .build();
 
-    private static void addItemToItemGroup(FabricItemGroupEntries entries) {
-        entries.add(MACE_HEAD);
-        entries.add(MACE_TIP);
-    }
-
     private static Item registerItem (String name, Item.Settings item) {
         return Registry.register(Registries.ITEM, Identifier.of(wham.MOD_ID, name), new Item(item));
     }
@@ -47,6 +42,10 @@ public class ModItems {
         }
         wham.LOGGER.info("[Wham!] Spiking up the rattle...");
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemToItemGroup);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(content ->
+                content.addAfter(Items.HEAVY_CORE,
+                        MACE_TIP,
+                        MACE_HEAD)
+        );
     }
 }
