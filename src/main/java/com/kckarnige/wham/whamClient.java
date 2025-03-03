@@ -27,6 +27,6 @@ public class whamClient implements ClientModInitializer {
 			registerResourcePack("perma_wind", NORMAL, Text.translatable("pack.wham.perma_wind.name"));
 			registerResourcePack("no_wind", NORMAL, Text.translatable("pack.wham.no_wind.name"));
 		}
-		wham.LOGGER.info("[Wham!] This should look nice...");
+		wham.LOGGER.info("This should look nice...");
 	}
 }

@@ -49,7 +49,7 @@ public class ModBlocks {
     }
 
     public static void registerModBlocks() {
-        wham.LOGGER.info("[Wham!] Spiking up the floor...");
+        wham.LOGGER.info("Spiking up the floor...");
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> entries.add(SPIKE_TRAP));
     }
 }
