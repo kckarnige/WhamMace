@@ -3,7 +3,6 @@ package com.kckarnige.wham.items;
 import com.kckarnige.wham.config.MidnightConfigStuff;
 import com.kckarnige.wham.wham;
 
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.component.type.ConsumableComponent;
 import net.minecraft.component.type.FoodComponent;
@@ -12,6 +11,7 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
+import net.minecraft.item.Items;
 import net.minecraft.item.consume.ApplyEffectsConsumeEffect;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -41,11 +41,6 @@ public class ModItems {
             )
             .build();
 
-    private static void addItemToItemGroup(FabricItemGroupEntries entries) {
-        entries.add(MACE_HEAD);
-        entries.add(MACE_TIP);
-    }
-
     private static Item registerItem (String id, Item.Settings item) {
         // This is why plan ahead (don't ask why it took 2 commits to finish this thought)
         // Idk why tf I'm talking, I didn't plan shit 💀
@@ -60,6 +55,10 @@ public class ModItems {
         }
         wham.LOGGER.info("[Wham!] Spiking up the rattle...");
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemToItemGroup);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(content ->
+                content.addAfter(Items.HEAVY_CORE,
+                MACE_TIP,
+                MACE_HEAD)
+        );
     }
 }
