@@ -14,7 +14,7 @@ import org.slf4j.LoggerFactory;
 
 public class wham implements ModInitializer {
 	public static final String MOD_ID = "wham";
-    public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+    public static final Logger LOGGER = LoggerFactory.getLogger("Wham!");
 
 	@Override
 	public void onInitialize() {
@@ -23,6 +23,6 @@ public class wham implements ModInitializer {
 		ModComponents.initialize();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
-		LOGGER.info("[Wham!] Now this should pack more of a punch!");
+		LOGGER.info("Now this should pack more of a punch!");
 	}
 }

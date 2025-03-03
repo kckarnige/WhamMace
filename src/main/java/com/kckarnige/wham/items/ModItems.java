@@ -40,7 +40,7 @@ public class ModItems {
             THE_JAR = registerItem("the_jar", new Item.Settings().maxCount(69).food(THE_JAR_FX).rarity(Rarity.EPIC));
             ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(entries -> entries.add(THE_JAR));
         }
-        wham.LOGGER.info("[Wham!] Spiking up the rattle...");
+        wham.LOGGER.info("Spiking up the rattle...");
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(content ->
                 content.addAfter(Items.HEAVY_CORE,

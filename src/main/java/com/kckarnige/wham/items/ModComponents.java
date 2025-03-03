@@ -16,6 +16,6 @@ public class ModComponents {
     );
 
     public static void initialize() {
-        wham.LOGGER.info("[Wham!] Harnessing the winds...", wham.MOD_ID);
+        wham.LOGGER.info("Harnessing the winds...", wham.MOD_ID);
     }
 }
