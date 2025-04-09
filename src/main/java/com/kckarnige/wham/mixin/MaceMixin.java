@@ -41,7 +41,7 @@ public abstract class MaceMixin extends Item {
     public void inventoryTick(ItemStack nullStack, World world, Entity entity, int slot, boolean selected) {
         if (!world.isClient()) {
             if (entity instanceof PlayerEntity player) {
-                if (player.getInventory().getMainHandStack().isOf(Items.MACE)) {
+                if (player.getMainHandStack().isOf(Items.MACE)) {
                     if (player.getMainHandStack().getMaxDamage() * 0.70 >= player.getMainHandStack().getMaxDamage() - player.getMainHandStack().getDamage()) {
                         player.getMainHandStack().remove(ModComponents.WIND_BOUNCE_READY);
                     } else {
