@@ -3,10 +3,10 @@ package com.kckarnige.wham.mixin;
 import com.kckarnige.wham.config.MidnightConfigStuff;
 import com.kckarnige.wham.enchantments.WhamEnchantment;
 import com.kckarnige.wham.items.ModComponents;
-import com.kckarnige.wham.wham;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.mob.MobEntity;
@@ -25,6 +25,7 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.Box;
 import net.minecraft.world.World;
+import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 
@@ -38,10 +39,10 @@ public abstract class MaceMixin extends Item {
         super(settings);
     }
 
-    public void inventoryTick(ItemStack nullStack, World world, Entity entity, int slot, boolean selected) {
+    public void inventoryTick(ItemStack stack, ServerWorld world, Entity entity, @Nullable EquipmentSlot slot) {
         if (!world.isClient()) {
             if (entity instanceof PlayerEntity player) {
-                if (player.getInventory().getMainHandStack().isOf(Items.MACE)) {
+                if (player.getMainHandStack().isOf(Items.MACE)) {
                     if (player.getMainHandStack().getMaxDamage() * 0.70 >= player.getMainHandStack().getMaxDamage() - player.getMainHandStack().getDamage()) {
                         player.getMainHandStack().remove(ModComponents.WIND_BOUNCE_READY);
                     } else {

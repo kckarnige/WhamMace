@@ -2,6 +2,7 @@ package com.kckarnige.wham.blocks.NewBlocks;
 
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityCollisionHandler;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.entity.damage.DamageType;
@@ -37,7 +38,7 @@ public class TrapBlock extends Block {
     }
 
     @Override
-    public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
+    protected void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity, EntityCollisionHandler handler) {
         if (entity instanceof LivingEntity) {
             if (world instanceof ServerWorld serverWorld) {
                 if (!entity.isSneaking() && entity.isOnGround()) {
